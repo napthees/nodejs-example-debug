@@ -47,9 +47,7 @@ Pour sortir du mode de débogage
     > .exit
 ```
 Informations supplémentaires sur le mode débogage :
-
     - Déclaration de fonctions de débogage dans un fichier de l'application
-
         // Instanciation de fonctions de débogage
 ```
         debugWarn = debug('warn');
@@ -65,8 +63,7 @@ Informations supplémentaires sur le mode débogage :
             });
         });
 ```
-    À PARTIR DE LA CONSOLE
-    
+    À PARTIR DE LA CONSOLE   
     - Ligne suivante
 ```
         > n
@@ -114,11 +111,8 @@ Informations supplémentaires sur le mode débogage :
                 >
 ```
 ### AUTRE CAS D'UTILISATION :
-   
     - L'instruction de débogage "debugger" met en pause l'exécution de l'application
-
         Exemple :
-        
         Implémentation dans le fichier server.js
 ``` 
             app.get('/', (req, res) => {
@@ -130,7 +124,6 @@ Informations supplémentaires sur le mode débogage :
             });
 ``` 
         À partir de la console
-
         - Lance le mode de débogage
 ```  
             > node inspect server.js
