@@ -1,0 +1,22 @@
+{
+  "name": "nodejs-example-debug",
+  "version": "0.1.0",
+  "description": "Un exemple de base pour déboguer dans Node.js.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "example",
+    "debug",
+    "nodejs"
+  ],
+  "author": "contact@napthees.com",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "debug": "^4.0.1"
+  }
+}
