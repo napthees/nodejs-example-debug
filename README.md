@@ -153,6 +153,8 @@ Résultat
 Ou autre exemple
             
 ```
+debug> repl
+Press Ctrl + C to leave debug repl
 > console.log(express)
 ```
 
@@ -180,8 +182,10 @@ L'instruction de débogage "debugger" met en pause l'exécution de l'application
 ```javascript
 
 app.get('/', (req, res) => {
+
     // Instruction de débogage qui met en pause l'exécution de l'application
     debugger
+    
     res.send({
         status : 'Bonjour !'
     });
