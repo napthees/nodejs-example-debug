@@ -69,11 +69,15 @@ Informations supplémentaires sur le mode débogage :
 - Déclaration de fonctions de débogage dans un fichier de l'application
     
 ```javascript
+
         // Instanciation de fonctions de débogage
         debugWarn = debug('warn');
         debugError = debug('error');
+        
         // ...
+        
         app.get('/', (req, res) => {
+        
             // Appel de fonction de débogage
             debugError('Une error est survenue');
             debugWarn('Un warning est survenu');
@@ -84,15 +88,14 @@ Informations supplémentaires sur le mode débogage :
         });
 ```
 
-    À PARTIR DE LA CONSOLE
-
-    - Ligne suivante
+À PARTIR DE LA CONSOLE
+- Ligne suivante
     
 ```
         > n
 ```
 
-        Example :
+Example :
         
 ```
             debug> n
