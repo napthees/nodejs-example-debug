@@ -5,12 +5,6 @@ Un exemple de base pour déboguer dans Node.js.
 [![Build Status via Travis CI](https://img.shields.io/badge/node.js-%3E%3D8.9.0-green.svg)](https://nodejs.org/en/download/releases/)
 [![Build Status via Travis CI](https://img.shields.io/badge/npm-%3E%3D5.5.1-red.svg)](https://docs.npmjs.com/cli/version)
 
-## La package ASYNC
-
-[![NPM version](https://img.shields.io/npm/v/async.svg)](https://www.npmjs.com/package/async)
-[![](https://data.jsdelivr.com/v1/package/npm/async/badge)](https://www.npmjs.com/package/async)
-[![libhive - Open source examples](https://www.libhive.com/providers/npm/packages/async/examples/badge.svg)](https://www.libhive.com/providers/npm/packages/async)
-
 ## Installer et démarrer
 
 En ligne de commande :
