@@ -65,9 +65,9 @@ En ligne de commande :
 > .exit
 ```
 
-Informations supplémentaires sur le mode débogage :
+INFORMATIONS SUPPLÉMENTAIRES SUR LE MODE DÉBOGAGE
 
-- Déclaration de fonctions de débogage dans un fichier de l'application
+- Déclaration de fonctions de débogage dans un fichier de l'application :
     
 ```javascript
 
@@ -91,19 +91,19 @@ app.get('/', (req, res) => {
 ```
 
 À PARTIR DE LA CONSOLE
-- Ligne suivante
+- Ligne suivante :
     
 ```
 > n
 ```
 
-Exemple :
+Exemple
         
 ```
 debug> n
 ```
 
-Résultat :
+Résultat
         
 ```
 break in server.js:1
@@ -118,7 +118,7 @@ puis de nouveau la commande n
 debug> n
 ```
 
-Nouveau résultat :
+Nouveau résultat
         
 ```
 break in server.js:2
@@ -128,13 +128,13 @@ break in server.js:2
 4
 ```
 
- - Mode qui permet d'afficher le contenu des variables
+ - Mode qui permet d'afficher le contenu des variables :
     
 ```
 > repl
 ```
 
-Exemple :
+Exemple
         
 ```
 debug> repl
@@ -142,7 +142,7 @@ Press Ctrl + C to leave debug repl
 > express
 ```
 
-Résultat :
+Résultat
         
 ```
 [Function: createApplication]
@@ -155,7 +155,7 @@ Ou autre exemple
 > console.log(express)
 ```
 
-Résultat :
+Résultat
             
 ```
 
@@ -172,11 +172,9 @@ Résultat :
 
 ### AUTRE CAS D'UTILISATION :
    
-- L'instruction de débogage "debugger" met en pause l'exécution de l'application
+L'instruction de débogage "debugger" met en pause l'exécution de l'application
 
-Exemple :
-        
-Implémentation dans le fichier server.js
+- Exemple d'implémentation dans le fichier server.js :
         
 ```javascript
 
@@ -192,14 +190,13 @@ app.get('/', (req, res) => {
 
 À partir de la console
 
- - Lance le mode de débogage
+- Lance le mode de débogage :
  
-
 ```
 > node inspect server.js
 ```
 
- - Ligne suivante
+- Ligne suivante
 
 ```
 > c
