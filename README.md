@@ -150,7 +150,7 @@ Résultat
 >
 ```
 
-Ou autre exemple
+Ou autre exemple qui permet un affichage plus détaillé
             
 ```
 debug> repl
