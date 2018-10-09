@@ -2,58 +2,77 @@
 
 Un exemple de base pour déboguer dans Node.js.
 
+[![Build Status via Travis CI](https://img.shields.io/badge/node.js-%3E%3D8.9.0-green.svg)](https://www.napthees.com)
+
 ## Installer et démarrer
 
 En ligne de commande :
 
-```
-� Pour installer les packages
+- Pour installer les packages
+
 ```
     > npm install
 ```
-� Pour démarrer l’application qui sera disponible à partir de votre navigateur sur localhost:3000
+
+- Pour démarrer l’application qui sera disponible à partir de votre navigateur sur localhost:3000
+
 ```
     > node server.js
 ```
-� Pour démarrer l’application avec l'affichage dans la console de toutes les informations de débogage
+
+- Pour démarrer l’application avec l'affichage dans la console de toutes les informations de débogage
+
 ```
     > DEBUG=* node server.js
 ```
-� Pour démarrer l'application avec l'affichage dans la console de toutes les informations de débogage du package express
+
+- Pour démarrer l'application avec l'affichage dans la console de toutes les informations de débogage du package express
+
 ```
     > DEBUG=express* node server.js
 ```
-� Pour démarrer l'application et afficher dans la console toutes les informations de débogage des données envoyées à partir du package express avec la fonction errorDebug()
+- Pour démarrer l'application et afficher dans la console toutes les informations de débogage des données envoyées à partir du package express avec la fonction errorDebug()
+
 ```
     > DEBUG=error node server.js
 ```
-� Pour démarrer l'application et afficher dans la console toutes les informations de débogage des données envoyées à partir du package express avec la fonction warnDebug()
+
+- Pour démarrer l'application et afficher dans la console toutes les informations de débogage des données envoyées à partir du package express avec la fonction warnDebug()
+
 ```
     > DEBUG=warn node server.js
 ```
-� Pour démarrer l'application avec les deux fonctions de débogage déclarées (warnDebug() & errorDebug())
+
+- Pour démarrer l'application avec les deux fonctions de débogage déclarées (warnDebug() & errorDebug())
+
 ```
     > DEBUG=warn,error node server.js
 ```
-```
-## LE MODE DE DÉBOGAGE
-```
-Pour démarrer le mode de débogage
-    > node inspect server.js
 
+## LE MODE DE DÉBOGAGE
+
+Pour démarrer le mode de débogage
+
+```
+    > node inspect server.js
+```
 À savoir : la commande 'node debug nameApplication' est dépréciée dans les nouvelles versions de Node.js
 
 Pour sortir du mode de débogage
+
+```
     > .exit
+```
 
 Informations supplémentaires sur le mode débogage :
 
-    - Déclaration de fonctions de débogage dans un fichier de l'application
-
+- Déclaration de fonctions de débogage dans un fichier de l'application
+    
+```javascript
         // Instanciation de fonctions de débogage
         debugWarn = debug('warn');
         debugError = debug('error');
-        ...
+        // ...
         app.get('/', (req, res) => {
             // Appel de fonction de débogage
             debugError('Une error est survenue');
@@ -63,13 +82,19 @@ Informations supplémentaires sur le mode débogage :
                 status : 'Bonjour !'
             });
         });
+```
 
     À PARTIR DE LA CONSOLE
 
     - Ligne suivante
+    
+```
         > n
+```
 
-        Example : 
+        Example :
+        
+```
             debug> n
             break in server.js:1
             > 1 (function (exports, require, module, __filename, __dirname) { const express = require('express');
@@ -81,23 +106,38 @@ Informations supplémentaires sur le mode débogage :
             > 2 const debug = require('debug');
             3 const app = express();
             4
+```
 
-    - Mode qui permet d'afficher le contenu des variables
+ - Mode qui permet d'afficher le contenu des variables
+    
+```
         > repl
+```
 
-        Exemple :
+Exemple :
+        
+```
             debug> repl
             Press Ctrl + C to leave debug repl
             > express
+```
 
-            Résultat :
-                [Function: createApplication]
-                >
+Résultat :
+        
+```
+            [Function: createApplication]
+            >
+```
 
-            OU
+OU
+            
+```
             > console.log(express)
+```
 
-            Résultat :
+Résultat :
+            
+```javascript
                 < { [Function: createApplication]
                 <   application:
                 <    { init: [Function: init],
@@ -107,14 +147,16 @@ Informations supplémentaires sur le mode débogage :
                 > undefined
                 >
 ```
+
 ### AUTRE CAS D'UTILISATION :
-```    
-    - L'instruction de débogage "debugger" met en pause l'exécution de l'application
+   
+- L'instruction de débogage "debugger" met en pause l'exécution de l'application
 
-        Exemple :
+Exemple :
         
-        Implémentation dans le fichier server.js
-
+Implémentation dans le fichier server.js
+        
+```javascript
             app.get('/', (req, res) => {
                 // Instruction de débogage qui met en pause l'exécution de l'application
                 debugger
@@ -122,11 +164,18 @@ Informations supplémentaires sur le mode débogage :
                     status : 'Bonjour !'
                 });
             });
-
-        À partir de la console
-
-        - Lance le mode de débogage
-            > node inspect server.js
-        - Ligne suivante
-            > c
 ```
+
+À partir de la console
+
+ - Lance le mode de débogage
+ 
+
+```
+            > node inspect server.js
+```
+
+ - Ligne suivante
+
+```
+            > c
