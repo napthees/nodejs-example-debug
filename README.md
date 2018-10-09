@@ -51,7 +51,7 @@ En ligne de commande :
 
 ## LE MODE DE DÉBOGAGE
 
-Pour démarrer le mode de débogage
+Pour démarrer le mode de débogage :
 
 ```
 > node inspect server.js
@@ -59,7 +59,7 @@ Pour démarrer le mode de débogage
 
 À savoir : la commande 'node debug nameApplication' est dépréciée dans les nouvelles versions de Node.js
 
-Pour sortir du mode de débogage
+Pour sortir du mode de débogage :
 
 ```
 > .exit
