@@ -75,7 +75,7 @@ Informations supplémentaires sur le mode débogage :
 debugWarn = debug('warn');
 debugError = debug('error');
 
-// ...
+...
 
 app.get('/', (req, res) => {
 
@@ -97,15 +97,30 @@ app.get('/', (req, res) => {
 > n
 ```
 
-Example :
+Exemple :
         
 ```
 debug> n
+```
+
+Résultat :
+        
+```
 break in server.js:1
 > 1 (function (exports, require, module, __filename, __dirname) { const express = require('express');
 2 const debug = require('debug');
 3 const app = express();
+```
+
+puis de nouveau la commande n
+        
+```
 debug> n
+```
+
+Nouveau résultat :
+        
+```
 break in server.js:2
 1 (function (exports, require, module, __filename, __dirname) { const express = require('express');
 > 2 const debug = require('debug');
@@ -134,7 +149,7 @@ Résultat :
 >
 ```
 
-OU
+Ou autre exemple
             
 ```
 > console.log(express)
@@ -142,7 +157,7 @@ OU
 
 Résultat :
             
-```javascript
+```
 
 < { [Function: createApplication]
 <   application:
