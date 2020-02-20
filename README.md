@@ -6,9 +6,6 @@
 
 Un exemple de base pour déboguer dans Node.js.
 
-[![Build Status via Travis CI](https://img.shields.io/badge/node.js-%3E%3D8.9.0-green.svg)](https://nodejs.org/en/download/releases/)
-[![Build Status via Travis CI](https://img.shields.io/badge/npm-%3E%3D5.5.1-red.svg)](https://docs.npmjs.com/cli/version)
-
 ## Installer et démarrer
 
 En ligne de commande :
