@@ -14,7 +14,7 @@
   "author": "contact@napthees.com",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.19.2"
   },
   "devDependencies": {
     "debug": "^4.0.1"
